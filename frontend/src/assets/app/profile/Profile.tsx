@@ -14,7 +14,7 @@ export const Profile = (props: {readonly lang?: "ja" | "en"} = { lang: "ja" })  
             >
                 <Avatar 
                 alt="Profile Icon" 
-                src="/public/avater.webp" 
+                src="/avater.webp" 
                 sx={{ width: 128, height: 128 }}
                 />
             </Grid>
