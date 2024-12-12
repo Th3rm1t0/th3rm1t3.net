@@ -1,20 +1,14 @@
 import './App.css'
-import { Container, Box, Avatar, Typography } from '@mui/material'
+import { Container } from '@mui/material'
+import { Profile } from './profile/Profile'
+import { useState } from 'react'
 
 export const App = () => {
+  const [lang, setLang] = useState<"ja"|"en">("ja")
   return (
     <>
       <Container>
-        <Box id="profile-box">
-          <Avatar 
-            alt="Profile Icon" 
-            src="/path-to-your-image.jpg" 
-            sx={{ width: 56, height: 56 }} 
-          />
-          <Typography variant="body1" textAlign="left" marginLeft="16px">
-            
-          </Typography>
-        </Box>
+        <Profile lang={lang}/>
       </Container>
     </>
   )
