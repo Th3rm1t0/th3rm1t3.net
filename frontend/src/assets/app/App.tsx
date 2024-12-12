@@ -4,7 +4,7 @@ import { Profile } from './profile/Profile'
 import { useState } from 'react'
 
 export const App = () => {
-  const [lang, setLang] = useState<"ja"|"en">("ja")
+  const [lang, _] = useState<"ja"|"en">("ja")
   return (
     <>
       <Container>
