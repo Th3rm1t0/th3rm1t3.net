@@ -1,5 +1,4 @@
 import './App.css'
-import { Box, Fab, Container } from '@mui/material'
 import { Profile } from './profile/Profile'
 import { useState } from 'react'
 
@@ -14,23 +13,27 @@ export const App = () => {
     }
   }
 
+  const ChangeLangButton = () => {
+    return (
+      <div
+        className="fixed bottom-8 left-8 z-[1000]"
+      >
+        <button
+          onClick={changeLang}
+          className="bg-green-500 h-13 px-5 text-white rounded-full p-4 shadow-lg focus:outline-none hover:bg-green-600"
+        >
+          {lang === "ja" ? (<><b>ja</b>/en</>) : (<>ja/<b>en</b></>)}
+        </button>
+      </div>
+    )
+  }
+
   return (
     <>
-      <Container>
-        <Profile lang={lang}/>
-      </Container>
-      <Box 
-        sx={{
-          position: 'fixed',
-          bottom: 30,
-          left: 30,
-          zIndex: 1000,
-        }}
-      >
-        <Fab color="primary" aria-label="home" onClick={changeLang}>
-          {lang}
-        </Fab>
-      </Box>
+      <div className='container mx-auto'>
+        <Profile lang={lang} />
+      </div>
+      <ChangeLangButton />
     </>
   )
 }
