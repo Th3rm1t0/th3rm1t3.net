@@ -20,7 +20,7 @@ export const App = () => {
       >
         <button
           onClick={changeLang}
-          className="bg-green-500 h-13 px-5 text-white rounded-full p-4 shadow-lg focus:outline-none hover:bg-green-600"
+          className="bg-green-700 h-13 px-5 text-white rounded-full p-4 shadow-lg focus:outline-none hover:bg-green-800"
         >
           {lang === "ja" ? (<><b>ja</b>/en</>) : (<>ja/<b>en</b></>)}
         </button>
